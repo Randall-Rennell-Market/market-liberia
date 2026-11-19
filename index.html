@@ -1,43 +1,427 @@
-1:32
-66
-github.com
-•••/market-li...
-Code
-Issues
-Pull requests
-More •
-• Files
-g main
-market-liberia / index.html
-Randall-Rennell-Market 41 minutes ago
-195 lines (97 loc) 3.53 KB
-Code
-Blame
-...
-1
-2
-З
-4
-5
-6
-7
-<!DOCTYPE htmi>
+
+
+<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
+
 <meta charset="UTF-8">
-‹meta name="viewport" content="width=dev
-‹title>Randall & Rennell Market Liberia‹
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Randall & Rennell Market Liberia</title>
+
 <style>
-*{box-sizing:border-box›
-body{margin: 0;font-family:Arial, sans-ser
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: #f5f7f5;
+
+  color: #222;
+
+}
+
+header {
+
+  background: #075b3b;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 30px 15px;
+
+}
+
+header h1 {
+
+  font-size: 25px;
+
+  margin: 0 0 10px;
+
+}
+
+nav {
+
+  background: #06452e;
+
+  padding: 15px;
+
+  text-align: center;
+
+}
+
+nav a {
+
+  color: white;
+
+  text-decoration: none;
+
+  margin: 7px;
+
+  font-size: 14px;
+
+}
+
+.hero {
+
+  text-align: center;
+
+  background: white;
+
+  padding: 45px 18px;
+
+}
+
+.hero h2 {
+
+  color: #075b3b;
+
+  font-size: 28px;
+
+}
+
+.hero p {
+
+  line-height: 1.7;
+
+  color: #555;
+
+}
+
+.shopbtn {
+
+  background: #075b3b;
+
+  color: white;
+
+  padding: 13px 22px;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+}
+
+.container {
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 22px 15px;
+
+}
+
+.search {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  margin: 10px 0 20px;
+
+}
+
+.products {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+
+  gap: 15px;
+
+}
+
+.product, .section {
+
+  background: white;
+
+  padding: 18px;
+
+  border-radius: 10px;
+
+}
+
+.product {
+
+  text-align: center;
+
+}
+
+.picture {
+
+  height: 110px;
+
+  background: #e8f1eb;
+
+  border-radius: 8px;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 45px;
+
+}
+
+.product h3, .section h2 {
+
+  color: #075b3b;
+
+}
+
+.product p {
+
+  color: #666;
+
+  font-size: 14px;
+
+}
+
+.section {
+
+  margin-top: 25px;
+
+  line-height: 1.8;
+
+}
+
+.contact a {
+
+  color: #075b3b;
+
+  text-decoration: none;
+
+}
+
+.contact p {
+
+  overflow-wrap: anywhere;
+
+}
+
+footer {
+
+  background: #06452e;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 24px;
+
+  margin-top: 30px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <h1>Randall & Rennell Market Liberia</h1>
+
+  <p>Your Marketplace, Your Community 🇱🇷</p>
+
+</header>
+
+<nav>
+
+  <a href="#home">Home</a>
+
+  <a href="#products">Products</a>
+
+  <a href="#confidence">Why Shop With Us</a>
+
+  <a href="#pickup">Pickup Locations</a>
+
+  <a href="#contact">Contact</a>
+
+</nav>
+
+<section class="hero" id="home">
+
+  <h2>Welcome to Market Liberia!</h2>
+
+  <p>Discover great products and enjoy convenient shopping across Liberia.</p>
+
+  <a class="shopbtn" href="#products">Shop Now</a>
+
+</section>
+
+<main class="container">
+
+<section class="section" id="confidence">
+
+  <h2>Shop with Confidence 🇱🇷</h2>
+
+  <p>We manage our products directly to give customers a more reliable shopping experience.</p>
+
+  <p>✓ Owner-managed products</p>
+
+  <p>✓ Convenient ordering</p>
+
+  <p>✓ Two Liberia pickup locations</p>
+
+  <p>✓ Direct customer support</p>
+
+</section>
+
+<h2 id="products">Explore Our Products</h2>
+
+<input
+
+  class="search"
+
+  id="search"
+
+  type="search"
+
+  placeholder="Search products..."
+
+  oninput="searchProducts()"
+
+>
+
+<div class="products" id="productList">
+
+  <div class="product">
+
+    <div class="picture">👕</div>
+
+    <h3>Clothing</h3>
+
+    <p>Prices coming soon</p>
+
+  </div>
+
+  <div class="product">
+
+    <div class="picture">📱</div>
+
+    <h3>Phones</h3>
+
+    <p>Prices coming soon</p>
+
+  </div>
+
+  <div class="product">
+
+    <div class="picture">👟</div>
+
+    <h3>Shoes</h3>
+
+    <p>Prices coming soon</p>
+
+  </div>
+
+  <div class="product">
+
+    <div class="picture">👜</div>
+
+    <h3>Bags</h3>
+
+    <p>Prices coming soon</p>
+
+  </div>
+
+</div>
+
+<section class="section" id="pickup">
+
+  <h2>Our Pickup Locations 📍</h2>
+
+  <h3>Pickup Location 1</h3>
+
+  <p>Zayzay Community, Paynesville, Monrovia, Liberia.</p>
+
+  <h3>Pickup Location 2</h3>
+
+  <p>Opposite Liberia Water & Sewer Corporation, Front Street, Liberia.</p>
+
+</section>
+
+<section class="section contact" id="contact">
+
+  <h2>Contact Us</h2>
+
+  <h3>Liberia Contact Numbers</h3>
+
+  <p><a href="tel:+231776579901">+231 776 579 901</a></p>
+
+  <p><a href="tel:+231881474680">+231 881 474 680</a></p>
+
+  <p><a href="tel:+231777531145">+231 77 753 1145</a></p>
+
+  <p><a href="tel:+231770196795">+231 77 019 6795</a></p>
+
+  <h3>More Information</h3>
+
+  <p>WhatsApp:
+
+    <a href="https://wa.me/8616602787251">+86 166 0278 7251</a>
+
+  </p>
+
+  <p>Email:
+
+    <a href="mailto:randallartus@gmail.com">randallartus@gmail.com</a>
+
+  </p>
+
+</section>
+
+</main>
+
+<footer>
+
+  <p>© 2026 Randall & Rennell Market Liberia</p>
+
+  <p>Connecting Liberia, One Purchase at a Time 🇱🇷</p>
+
+</footer>
+
+<script>
+
+function searchProducts() {
+
+  const query = document.getElementById("search").value.toLowerCase();
+
+  document.querySelectorAll(".product").forEach(product => {
+
+    product.style.display =
+
+      product.innerText.toLowerCase().includes(query) ? "" : "none";
+
+  });
+
+}
+
+</script>
+
+</body>
+
+</html>
